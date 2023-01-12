@@ -4,44 +4,60 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 const OnGoingCampaigns = () => {
     return (
         <View style={styles.cardContainer}>
+        <Image
+                    source={{uri: '/Users/imac/Documents/alfiDev/HandsOfHope/src/assets/images/volunteer.png'}}
+                    style={styles.cardImage}
+                />
             <View style={styles.cardContentContainer}>
-                <Text style={styles.cardTitle}>Hello</Text>
-                <Text style={styles.cardDescription}>Hello</Text>
+                <View>
+                <Text style={styles.cardHeading}>Active Campaigns</Text>
+                <Text style={styles.cardTitle}>Cloth for Winter</Text>
+                </View>
+                <Text style={styles.cardDescription}>Raised so far $3,000</Text>
             </View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
+    cardHeading: {
+        color: 'white',
+    },
     cardContainer: {
-        width: "90%",
-        height: 300,
+        width: "100%",
+        height: 150,
         marginVertical: 10,
         borderRadius: 10,
         overflow: "hidden",
-        backgroundColor: '#fff',
-        elevation: 5
+        backgroundColor: '#6C00FF',
+        elevation: 5,
+        flexDirection : 'row',
+        alignItems: 'center',
     },
     cardImageContainer: {
-        width: "100%",
-        height: "60%",
+        width: "20%",
+        height: "20%",
     },
     cardImage: {
-        width: "100%",
-        height: "100%"
+        width: 50,
+        height: 50,
+        marginLeft: 10
     },
     cardContentContainer: {
-        padding: 10,
-        height: "40%"
+        padding: 15,
+        height: "80%",
+        flexDirection: "column",
+        justifyContent: 'space-between',
     },
     cardTitle: {
         fontSize: 24,
         fontWeight: "bold",
-        marginBottom: 10
+        marginBottom: 10,
+        color: 'white'
     },
     cardDescription: {
         fontSize: 18,
-        color: "#666",
+        color: "white",
     }
 });
 
